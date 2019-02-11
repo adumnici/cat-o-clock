@@ -21,9 +21,9 @@ class Clock extends React.Component{
   render () {
     const imageName = this.getImageName();
     return (
-      <div className="tc ph4">
+      <div className="tc ph4 vh-100 dt w-100">
         <div>
-          <img alt="cats party" src={imagePath[imageName]} />
+          <img alt="cats party" className="dtc" src={imagePath[imageName]} />
         </div>
           <h1>It is {new Date().toLocaleTimeString()}.</h1>
           <button type="button" onClick={this.changeImage}>
@@ -38,5 +38,5 @@ ReactDOM.render(<Clock />, document.getElementById('root'))
 
  
 
-// setInterval(Clock, 1000);
+// setInterval(<Clock />, 1000);
 
